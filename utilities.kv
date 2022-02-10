@@ -1,0 +1,14 @@
+<Title@Label>
+    size_hint: 1, 1
+    pos_hint: {'left': 1, 'top': 1}
+    color: 1, 1, 0
+    font_size: 30
+    halign: 'center'
+    valign: 'middle'
+    canvas.before:
+        Color:
+            rgb: 0, .5, .5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+

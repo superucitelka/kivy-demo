@@ -1,0 +1,11 @@
+<MenuScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Title:
+            text: 'Menu'
+        Button:
+            text: 'Translator'
+            on_press: root.manager.current = 'translator'
+        Button:
+            text: 'Konec'
+            on_release: app.stop()
