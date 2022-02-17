@@ -1,10 +1,40 @@
 <TranslatorScreen>:
     BoxLayout:
         orientation: 'vertical'
-        Title:
-            text: 'Translator'
+        ScreenTitle:
+            Title:
+                text: 'Menu'
+            Logo:
+                on_press: root.manager.current = 'menu'
+        BoxLayout:
+            size_hint: 1, .7
+            GridLayout:
+                cols: 2
+                spacing: 10
+                padding: 10
+                BoxLayout:
+                    size_hint: 1, .1
+                    orientation: "horizontal"
+                    Label:
+                        text: "Jazyk zdroje"
+                    TextInput:
+                        text: "en"
+                        font_size: 20
+                BoxLayout:
+                    size_hint: 1, .1
+                    orientation: "horizontal"
+                    Label:
+                        text: "Jazyk překladu"
+                    TextInput:
+                        text: "cs"
+                        font_size: 20
+                TextInput:
+                    multiline: True
+                TextInput:
+                    multiline: True
         Button:
-            text: 'My settings button'
-        Button:
-            text: 'Back to menu'
-            on_press: root.manager.current = 'menu'
+            size_hint: 1, .1
+            text: "Přeložit"
+
+        StatusBar:
+            size_hint: 1, .1

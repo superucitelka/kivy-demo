@@ -1,3 +1,8 @@
+<Logo@ButtonBehavior+Image>
+    size_hint: .1, 1
+    pos_hint: {'left': 1, 'top': 1}
+    source: 'resources/img/kivy_logo.png'
+
 <Title@Label>
     size_hint: 1, 1
     pos_hint: {'left': 1, 'top': 1}
@@ -12,3 +17,33 @@
             size: self.size
             pos: self.pos
 
+<ScreenTitle@RelativeLayout>
+    size_hint: 1, .1
+    pos_hint: {'left': 1, 'top': 1}
+    canvas.before:
+        Color:
+            rgb: 0, 0, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<MenuButton@Button>
+    size_hint: 1, .1
+
+<StatusBar@GridLayout>
+    cols: 3
+    canvas:
+        Color:
+            rgb: .9, .9, .9
+        Rectangle:
+            size: self.size
+    Image:
+        source: "resources/img/skola_logo.png"
+    Label:
+        markup: True
+        text: "Copyright 2022 - [b]IT3[/b]"
+        color: .3, .3, .3
+    Label:
+        text: "Kivy"
+        font_size: 30
+        bold: True
